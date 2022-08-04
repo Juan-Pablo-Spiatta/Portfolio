@@ -10,7 +10,9 @@ import reportWebVitals from './assets/helpers/reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <h1>esta es la pagina</h1>
+    <Router>
+      <App />
+    </Router>
   </div>
 );
 
