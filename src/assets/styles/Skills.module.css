@@ -1,0 +1,123 @@
+.skills{
+    display: flex;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px;
+}
+.title{
+    margin-bottom: 1.5rem;
+}
+.paragraph{
+    margin: 0 1rem 1rem 1rem;
+}
+
+.technologyContainer{
+    display: flex;
+    margin: 1rem;
+}
+.techs{
+    display: grid;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    grid-template-columns: repeat(6, 1fr);
+    height: calc(100px + 2rem);
+}
+.arrow{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    height: 100px;
+    width: 50px;
+    margin: 1rem;
+}
+    #arrowLeft{
+        width: 20px;
+        height: 20px;
+        border-left: solid 2px var(--color-1);
+        border-bottom: solid 2px var(--color-1);
+        transform: rotate(45deg);
+    }
+    #arrowRight{
+        width: 20px;
+        height: 20px;
+        border-top: solid 2px var(--color-1);
+        border-right: solid 2px var(--color-1);
+        transform: rotate(45deg);
+    }
+.technology{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem;
+}
+.technology > span{
+    color: var(--color-1);
+    overflow: hidden;
+    text-align: center;
+    font-weight: bolder;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+.technologyIcon{
+    position: absolute;
+    z-index: 2;
+    transition: transform .5s ease;
+}
+.technologyIcon:hover{
+    filter: hue-rotate(200deg) contrast(200%) brightness(170%) ;
+    transform: translateX(-10px) translateY(-10px);
+}
+.technology:hover > span{
+    color: var(--color-5);
+    opacity: 1;
+}
+.technologyIconShadow{
+    position: relative;
+    filter: brightness(0) blur(2px);
+}
+@media screen and (max-width: 1150px){
+    .techs{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media screen and (max-width: 1000px){
+    .techs{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 900px){
+    .techs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 700px){
+    .techs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .paragraph{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 675px){
+    .paragraph{
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .techs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 300px){
+    .paragraph{
+        margin: 0 3rem;
+    }
+}

@@ -1,0 +1,79 @@
+.home{
+    font-size: 1rem;
+    flex-direction: column;
+}
+
+.top, 
+.bottom{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50vh;
+}
+.top{
+    justify-content: center;
+    background-color: var(--color-1);
+}
+.bottom{
+    z-index: 1;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-2);
+}
+
+.name, 
+.profession{
+    text-align: center;
+}
+.name{
+    position: absolute;
+    align-self: flex-end;
+    color: var(--color-2);
+    font-size: 5em;
+    line-height: .6em;
+    margin: 0 3rem;
+    animation: nameAnimation .7s ease-in-out;
+}
+.profession{
+    color: var(--color-1);
+    font-size: 1.8em;
+    margin: 1rem;
+    animation: professionAnimation 1.4s ease-in-out;
+} 
+
+.networksContainer{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    animation: professionAnimation 1.4s ease-in-out;
+}
+.networks{
+    margin: .2rem;
+}
+.networks > img{
+    width: 3em;
+    height: 3em;
+}
+.networks > img:hover{
+    filter: hue-rotate(200deg) contrast(165%) brightness(180%);
+}
+
+@keyframes nameAnimation {
+    from{bottom: -20vh;}
+    to{bottom: 0;}
+}
+@keyframes professionAnimation {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media screen and (max-width: 1000px){
+    .home{
+        font-size: .7rem;
+    }
+}   
+@media screen and (max-width: 675px){
+    .name{
+        line-height: .8em;
+    }
+}   

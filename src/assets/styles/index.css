@@ -1,0 +1,84 @@
+:root{
+  --color-1: #9186b9;
+  --color-2: #1d1c1c;
+  --color-2-b: #222020;
+  --color-4: #57525f;
+  --color-3: #09090e;
+  --color-5: #c8f89e;
+  --color-6: #010102;
+  --color-6-transparent: #151615bb;
+
+  --primary-font: 'Raleway';
+  --secundary-font: 'Roboto Slab', serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-6); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-4); 
+}
+/* end Scroll */
+
+html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--primary-font);
+  background-color: var(--color-2);
+}
+
+.wrapper{
+  padding: 5% 10%;
+  justify-content: center;
+}
+
+section{
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  background-color: var(--color-2);
+}
+
+p{
+  color: var(--color-4);
+  font-family: var(--secundary-font);
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+h2{
+  font-size: 3rem;
+  color: var(--color-5);
+}
+
+@media screen and (max-width: 675px){
+  h2{
+    font-size: 2.4rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
+
+
