@@ -9,11 +9,9 @@ import reportWebVitals from './assets/helpers/reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
-    <Router>
-      <App />
-    </Router>
-  </div>
+  <Router>
+    <App />
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

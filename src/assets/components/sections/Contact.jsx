@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import style from '../../styles/Contact.module.css'
 
+import formSubmitFetch from '../../helpers/formSubmitFetch';
+
 const Contact = () => {
     const [form, setForm] = useState({name: "", email: "", affair: "", message: ""});
 
@@ -12,11 +14,7 @@ const Contact = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("https://formsubmit.co/ajax/spiattajuanpablodesarrollador@gmail.com", {
-        method: "POST",
-        body: new FormData("hola")
-        })
-        .then( response => alert("enviado"))
+        formSubmitFetch();
     }
 
     return (
@@ -27,7 +25,7 @@ const Contact = () => {
                     <div className={ style.contactData }>
 
                     </div>
-                    <form className={ style.form } onSubmit={ handleSubmit }>
+                    <form className={ style.form } onSubmit={ handleSubmit } >
                         <label htmlFor="name">
                             Nombre
                             <input 
