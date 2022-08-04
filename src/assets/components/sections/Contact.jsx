@@ -18,14 +18,14 @@ const Contact = () => {
     }
 
     return (
-        <section className={ style.contact }>
-            <div className={ `${ style.container } wrapper `}>
+        <section className={ `${ style.contact } wrapper` }>
+            <div className={ style.container }>
                 <h2 className={ style.title }> Contacto </h2>
                 <div className={ style.formContainer }>
                     <div className={ style.contactData }>
 
                     </div>
-                    <form className={ style.form } onSubmit={ handleSubmit } >
+                    <form className={ style.form } onSubmit={ handleSubmit } autoComplete="off" >
                         <label htmlFor="name">
                             Nombre
                             <input 
@@ -60,6 +60,7 @@ const Contact = () => {
                         <label htmlFor="message">
                             Mensaje
                             <textarea 
+                            className={ style.message }
                             name="message" 
                             id="message" 
                             cols="30" 
@@ -70,7 +71,7 @@ const Contact = () => {
                             />
                         </label>
                         <label htmlFor="">
-                            <input type="submit" />    
+                            <input className={ style.submitButton } type="submit" />    
                         </label>    
                     </form>
                 </div>

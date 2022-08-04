@@ -6,7 +6,7 @@ import myPicture from '../../img/my-picture.jpg';
 
 const About = () => {
     return (
-        <section className={ `${  style.about } wrapper` }>
+        <section className={ `${ style.about } wrapper` }>
             <div className={ style.container }>
                 <h2 className={ style.title }> Sobre mi </h2>
                 <p className={ style.paragraph }>
