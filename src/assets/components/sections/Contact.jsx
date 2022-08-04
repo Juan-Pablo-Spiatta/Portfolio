@@ -14,7 +14,7 @@ const Contact = () => {
         e.preventDefault();
         fetch("https://formsubmit.co/ajax/spiattajuanpablodesarrollador@gmail.com", {
         method: "POST",
-        body: "form"
+        body: new FormData("hola")
         })
         .then( response => alert("enviado"))
     }
