@@ -3,6 +3,9 @@ import style from '../../styles/Contact.module.css'
 
 import formSubmitFetch from '../../helpers/formSubmitFetch';
 
+import wspIcon from '../../img/usual-icons/wsp-icon.svg';
+import mailIcon from '../../img/usual-icons/mail-icon.svg';
+
 const Contact = () => {
     const [form, setForm] = useState({name: "", email: "", affair: "", message: ""});
 
@@ -23,23 +26,39 @@ const Contact = () => {
                 <h2 className={ style.title }> Contacto </h2>
                 <div className={ style.formContainer }>
                     <div className={ style.contactData }>
-
+                        <ul className={ style.contactList }>
+                            <li className={ style.contactListItems }>
+                                <div className={ style.imageContainer }>
+                                    <img src={ mailIcon } alt="icono de mail" />
+                                    <p>Email</p>
+                                </div>
+                                <span className={ style.email }>spiattajuanpablodesarrollador@gmail.com</span>
+                            </li>
+                            <li className={ style.contactListItems }>
+                                <div className={ style.imageContainer }>
+                                    <img src={ wspIcon } alt="icono de wsp" />
+                                    <p>Whatsapp</p>
+                                </div>
+                                <span className={ style.mobileNumber }>+54-2477-220877</span>
+                            </li>
+                        </ul>
                     </div>
                     <form className={ style.form } onSubmit={ handleSubmit } autoComplete="off" >
                         <label htmlFor="name">
                             Nombre
-                            <input 
+                            <input
+                                spellCheck="false"
                                 type="text" 
                                 id='name' 
                                 name='name' 
-                                placeholder='Nombre' 
                                 value={ form.name } 
                                 onChange={ handleChange }
                             />
                         </label>
                         <label htmlFor="email">
                             Correo
-                            <input 
+                            <input
+                                spellCheck="false"
                                 type="text" 
                                 id='email' 
                                 name='email' 
@@ -50,6 +69,7 @@ const Contact = () => {
                         <label htmlFor="affair">
                             Asunto
                             <input 
+                                spellCheck="false"
                                 type="text" 
                                 id='affair' 
                                 name='affair' 
@@ -60,6 +80,7 @@ const Contact = () => {
                         <label htmlFor="message">
                             Mensaje
                             <textarea 
+                            spellCheck="false"
                             className={ style.message }
                             name="message" 
                             id="message" 
@@ -70,9 +91,9 @@ const Contact = () => {
                             onChange={ handleChange }
                             />
                         </label>
-                        <label htmlFor="">
-                            <input className={ style.submitButton } type="submit" />    
-                        </label>    
+                        <button className={ style.submitButton } type="submit">
+                            Enviar
+                        </button>       
                     </form>
                 </div>
             </div>

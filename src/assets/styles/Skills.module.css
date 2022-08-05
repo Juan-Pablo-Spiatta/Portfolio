@@ -71,7 +71,7 @@
     transition: transform .5s ease;
 }
 .technologyIcon:hover{
-    filter: hue-rotate(200deg) contrast(200%) brightness(170%) ;
+    filter: hue-rotate(200deg) contrast(170%) brightness(170%) ;
     transform: translateX(-10px) translateY(-10px);
 }
 .technology:hover > span{
