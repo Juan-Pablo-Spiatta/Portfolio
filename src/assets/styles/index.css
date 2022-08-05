@@ -2,6 +2,7 @@
   --color-1: #9186b9;
   --color-2: #1d1c1c;
   --color-2-b: #222020;
+  --color-2-c: #080808;
   --color-4: #57525f;
   --color-3: #09090e;
   --color-5: #9fc579;
@@ -46,6 +47,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--primary-font);
   background-color: var(--color-2);
+}
+
+footer{
+  height: 200px;
+  background-color: var(--color-2-c);
 }
 
 .wrapper{

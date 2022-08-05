@@ -15,22 +15,6 @@ const ListOfProjects = [
         link: 'https://app-clima-jps.netlify.app/',
         repository: 'https://github.com/Juan-Pablo-Spiatta/Pagina-clima'
     },
-    {   
-        id: 2,
-        imgUrl: img,
-        title: 'Pagina del clima',
-        info: 'Pagina del clima info... Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci natus cumque soluta facere ad, sequi, corporis culpa amet excepturi consequatur enim ullam illo accusantium exercitationem doloribus sunt quo. Eum, nulla!',
-        link: 'https://app-clima-jps.netlify.app/',
-        repository: 'https://github.com/Juan-Pablo-Spiatta/Pagina-clima'
-    },
-    {   
-        id: 3,
-        imgUrl: img,
-        title: 'Pagina del clima',
-        info: 'Pagina del clima info... Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci natus cumque soluta facere ad, sequi, corporis culpa amet excepturi consequatur enim ullam illo accusantium exercitationem doloribus sunt quo. Eum, nulla!',
-        link: 'https://app-clima-jps.netlify.app/',
-        repository: 'https://github.com/Juan-Pablo-Spiatta/Pagina-clima'
-    },
 ]
 
 

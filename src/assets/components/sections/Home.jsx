@@ -15,9 +15,30 @@ const Home = () => {
             <div className={ style.bottom }>
                 <h1 className={ style.profession }>Frontend Developer</h1>
                 <ul className={ style.networksContainer }>
-                    <li className={ style.networks }><img src={codePen} alt="codepen" /></li>
-                    <li className={ style.networks }><img src={gitHub} alt="github" /></li>
-                    <li className={ style.networks }><img src={linkedIn} alt="linkedin" /></li>
+                    <li>
+                        <a 
+                            className={ style.networks } 
+                            href="https://codepen.io/juan-pablo-spiatta"
+                            target="_blank" >
+                                <img src={codePen} alt="codepen" />
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            className={ style.networks } 
+                            href="https://github.com/Juan-Pablo-Spiatta" 
+                            target="_blank">
+                                <img src={gitHub} alt="github" />
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            className={ style.networks } 
+                            href="https://www.linkedin.com/in/juan-pablo-spiatta/" 
+                            target="_blank">
+                                <img src={linkedIn} alt="linkedin" />
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>

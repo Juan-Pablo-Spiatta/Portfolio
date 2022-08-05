@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+    .name{
+        color: var(--color-1);
+        text-align: center;
+        margin: 2rem 1rem .5rem 1rem;
+    }
+    .networksContainer{
+        display: flex;
+        align-self: center;
+        list-style: none;
+    }
+        .networks{
+            cursor: pointer;
+            margin: .3rem;
+        }
+        .networks > img:hover{
+            filter: hue-rotate(200deg) contrast(165%) brightness(180%);
+        }
+        .networks > img{
+            width: 40px;
+            height: 40px;
+        }
+    .copyright,
+    .desing{
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--color-4);
+    }
+
+    .desing > a{
+        text-decoration: none;
+        color: var(--color-5);
+    }

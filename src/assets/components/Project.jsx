@@ -20,18 +20,18 @@ const Project = ( { imgUrl, title, info, webUrl, repositoryUrl } ) => {
                 </div>
             </div>
             <div className={ style.contentInfo }>
-                <a className={ style.links } href={ repositoryUrl }>
+                <a className={ style.links } href={ repositoryUrl } target="_blank">
                     <img className={ style.icon } src={ gitHubIcon } alt="github-icon" />
                     <h3 className={ style.subtitle }> Repositorio </h3>
                 </a>
-                <a className={ style.links } href={ webUrl }>
+                <a className={ style.links } href={ webUrl } target="_blank">
                     <img className={ style.icon } src={ linkIcon } alt="link-icon" />
                     <h3 className={ style.subtitle }> Pagina </h3>
                 </a>
-                <a className={ style.links } href={ webUrl }>
+                {/* <a className={ style.links } href={ webUrl }>
                     <img className={ style.icon } src={ infoIcon } alt="info-icon" />
                     <h3 className={ style.subtitle }> Info </h3>
-                </a>
+                </a> */}
             </div>
         </li>
     );
