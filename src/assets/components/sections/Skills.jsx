@@ -14,16 +14,17 @@ const Skills = () => {
     useEffect(() => {
     }, []);
     return (
-        <section className={ `${style.skills} wrapper` }>
+        <section id='skills' className={ `${style.skills} wrapper` }>
             <div className={ style.container }>
                 <h2 className={ style.title }> Habilidades </h2>
                 <p className={ style.paragraph }> 
-                    Tengo conocimientos en HTML, CSS, JavaScript y React.js, para gestionar mis proyectos uso Git y GitHub, y como entorno de desarrollo estoy usando visual studio code. 
-                    <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam ea ducimus voluptatem? Facilis doloremque pariatur porro illum temporibus tempora minus voluptates repellendus impedit animi excepturi molestias distinctio, sequi nesciunt?
+                    Mis conocimientos como frontend son en <b>HTML</b>, <b>CSS</b> y <b>JavaScript</b>, estudie y practique durante bastante tiempo estos tres lenguajes básicos y luego me adentre en la librería de <b>React.js</b>. En cuanto a React, aprendí a utilizar componentes junto con sus props y tengo conocimiento en ciertos hooks como useState y useEffect que es lo que más utilice hasta el momento y también utilizo react-router para la navegación de las distintas secciones de mis proyectos.
                     <br />
                     <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laudantium pariatur ducimus tenetur corporis dolorum architecto amet! Expedita sit nobis alias facere illum cum fuga, sapiente, placeat hic perferendis doloremque!
+                    Como estudiante de sistemas tengo conocimientos en otros lenguajes como <b>C++</b>, <b>Java</b> y <b>Phyton</b>, con estos aprendí distintos conceptos de programación y me ayudaron bastante al estudiar JavaScript. Junto con estos lenguajes aprendí <b>buenas prácticas</b> a la hora de escribir código, conceptos como la programación orientada a objetos (<b>{"POO"}</b>), estructuras de datos (<b>{"ED"}</b>), patrones de diseño (<b>{"design patterns"}</b>) y a escribir código <b>eficiente</b> y <b>eficaz</b>.
+                    <br />
+                    <br />
+                    Como entorno de desarrollo utilizo <b>Visual Studio Code</b> y para gestionar mis proyectos <b>Git</b> y <b>Github</b>, donde alojo mi portfolio con gh-pages.
 
                 </p>
                 <div className={ style.technologyContainer }>

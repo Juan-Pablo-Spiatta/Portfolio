@@ -1,4 +1,8 @@
-.container{
+/*-----Footer-----------*/
+footer{
+    margin-top: 50px;
+}
+footer > .container{
     display: flex;
     flex-direction: column;
 }
@@ -31,6 +35,20 @@
     }
 
     .desing > a{
+        position: relative;
         text-decoration: none;
         color: var(--color-5);
+    }
+    .desing > a::after{
+        position: absolute;
+        content: '';
+        transition: width .1s ease-in;
+        width: 0%;
+        height: 1px;
+        background-color: var(--color-5);
+        left: 0;
+        bottom: 0;
+    }
+    .desing > a:hover::after{
+        width: 100%;
     }

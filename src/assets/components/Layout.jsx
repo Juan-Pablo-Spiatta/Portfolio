@@ -38,7 +38,8 @@ const Layout = () => {
                                         <a 
                                             className={ style.networks } 
                                             href="https://codepen.io/juan-pablo-spiatta"
-                                            target="_blank" >
+                                            rel='noopener'
+                                            target='_blank'>
                                                 <img src={codePen} alt="codepen" />
                                         </a>
                                     </li>
@@ -46,7 +47,8 @@ const Layout = () => {
                                         <a 
                                             className={ style.networks } 
                                             href="https://github.com/Juan-Pablo-Spiatta" 
-                                            target="_blank">
+                                            rel='noopener'
+                                            target='_blank'>
                                                 <img src={gitHub} alt="github" />
                                         </a>
                                     </li>
@@ -54,7 +56,8 @@ const Layout = () => {
                                         <a 
                                             className={ style.networks } 
                                             href="https://www.linkedin.com/in/juan-pablo-spiatta/" 
-                                            target="_blank">
+                                            rel='noopener'
+                                            target='_blank'>
                                                 <img src={linkedIn} alt="linkedin" />
                                         </a>
                                     </li>
@@ -63,7 +66,7 @@ const Layout = () => {
                                     &copy; Copyright 2022 - Todos los derechos reservados
                                 </h5>
                                 <h5 className={ style.desing }>
-                                    Diseño por <a href="">Juan Pablo Spiatta</a>
+                                    Diseño por <a href="#home">Juan Pablo Spiatta</a>
                                 </h5>
                             </div>
                         </footer>

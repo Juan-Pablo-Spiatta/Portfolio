@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import style from '../../styles/Contact.module.css'
+import style from '../../styles/Contact.module.css';
 
 import formSubmitFetch from '../../helpers/formSubmitFetch';
+import { emailValidation } from '../../helpers/validations';
 
 import wspIcon from '../../img/usual-icons/wsp-icon.svg';
 import mailIcon from '../../img/usual-icons/mail-icon.svg';
 
 const Contact = () => {
     const [form, setForm] = useState({name: "", email: "", affair: "", message: ""});
+    const [errorText, setErrorText] = useState("");
+    const [messageOK, setMessageOK] = useState("");
 
     const handleChange = (e) => {
         setForm({
@@ -17,11 +20,32 @@ const Contact = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        formSubmitFetch();
+        if(e.target.email.value === ""){
+            setMessageOK("");
+            setErrorText("Ingrese una direccion de correo - campo obligatorio *");
+        }else{
+            if(emailValidation(e.target.email.value)){
+                setErrorText("");
+                
+                setMessageOK("Enviando");
+                if(formSubmitFetch()){
+                    setMessageOK("Ocurrio un error, intentelo nuevamente")
+                }
+                else{
+                    setForm({name: "", email: "", affair: "", message: ""})
+                    setMessageOK("Mensaje enviado!");
+                };
+                
+            }
+            else{
+                setMessageOK("");
+                setErrorText("Ingrese una direccion de correo valida");
+            }
+        }
     }
 
     return (
-        <section className={ `${ style.contact } wrapper` }>
+        <section id='contact' className={ `${ style.contact } wrapper` }>
             <div className={ style.container }>
                 <h2 className={ style.title }> Contacto </h2>
                 <div className={ style.formContainer }>
@@ -43,7 +67,7 @@ const Contact = () => {
                             </li>
                         </ul>
                     </div>
-                    <form className={ style.form } onSubmit={ handleSubmit } autoComplete="off" >
+                    <form className={ style.form } onSubmit={ handleSubmit } autoComplete="off" action='' >
                         <label htmlFor="name">
                             Nombre
                             <input
@@ -56,7 +80,7 @@ const Contact = () => {
                             />
                         </label>
                         <label htmlFor="email">
-                            Correo
+                            Correo *
                             <input
                                 spellCheck="false"
                                 type="text" 
@@ -65,6 +89,7 @@ const Contact = () => {
                                 value={ form.email }
                                 onChange={ handleChange }
                             />
+                            <span className={ style.emailOK }> {errorText} </span>
                         </label>
                         <label htmlFor="affair">
                             Asunto
@@ -91,9 +116,15 @@ const Contact = () => {
                             onChange={ handleChange }
                             />
                         </label>
-                        <button className={ style.submitButton } type="submit">
-                            Enviar
-                        </button>       
+                        <div className={ style.buttonContainer }>
+                            <button className={ style.submitButton } type="submit">
+                                Enviar
+                            </button>
+                            <div id='loadingContainer' className={ style.loadingContainer }>
+                                <div className={ style.loading }></div>
+                            </div>
+                        </div>
+                        <span id='submitOK' className={ style.submitOK }> { messageOK }</span>      
                     </form>
                 </div>
             </div>

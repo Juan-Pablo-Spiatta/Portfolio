@@ -54,8 +54,11 @@
     width: 3em;
     height: 3em;
 }
-.networks > img:hover{
-    filter: hue-rotate(200deg) contrast(170%) brightness(200%);
+
+@media (hover: hover){
+    .networks > img:hover{
+        filter: hue-rotate(200deg) contrast(170%) brightness(200%);
+    }    
 }
 
 @keyframes nameAnimation {

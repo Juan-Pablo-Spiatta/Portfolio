@@ -6,17 +6,20 @@ import myPicture from '../../img/my-picture.jpg';
 
 const About = () => {
     return (
-        <section className={ `${ style.about } wrapper` }>
+        <section id='about' className={ `${ style.about } wrapper` }>
             <div className={ style.container }>
                 <h2 className={ style.title }> Sobre mi </h2>
                 <p className={ style.paragraph }>
                     <span className={ style.pictureContainer }>
-                        <img className={ style.picture } src={ myPicture } alt="foto-perfil" />
+                        <img className={ style.picture } src={ myPicture } alt="foto perfil spiatta" />
                     </span>
-                    Hola! Mi nombre es Juan Pablo, soy estudiante de sistemas y estoy capacitandome como desarrollador Frontend. Mi objetivo actual es conseguir un trabajo como trainee o junior, busco tambien aprender sobre el backend para ampliar mis oportunidades, aunque actualmente me estoy enfocando solo en el front. Me gusta mucho el mundo de la tecnologia y el relax de escribir codigo es lo que mas disfruto de los momentos en los que estoy en mi pc. 
+                    👋 Hola! Mi nombre es Juan Pablo, soy estudiante de sistemas y estoy capacitándome como desarrollador Frontent. Tengo 27 años y soy un fanático de la tecnología. Programar es algo que encuentro muy entretenido y siento que es un gran ejercicio mental, es por eso que decidí que esto es a lo que quiero dedicarme. Mis pasatiempos son los videojuegos, la guitarra y el ejercicio.
                     <br />
                     <br />
-                    Espero poder llegar a ser parte de un equipo de trabajo y ampliar aun mas mis conocimientos. Pasate por la seccion de contacto y dejame un mensajito. Gracias! 😄
+                    Mi objetivo profesional es ser desarrollador full-stack, estoy empezando por el frontend y con el tiempo me adentraré más en el backend. Todavía tengo mucho que aprender y espero poder llegar a ser parte de un equipo de trabajo que me incentive a seguir creciendo.
+                    <br />
+                    <br />
+                    Si te interesa contactarte conmigo, por favor pasate por la sección de <a href="#contact">contacto</a> y dejame un mensajito. Gracias!😄
                 </p>
             </div>
         </section>

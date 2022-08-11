@@ -20,9 +20,9 @@ const ListOfProjects = [
 
 const Portfolio = () => {
     return (
-        <section className={ `${style.portfolio} wrapper` }>
+        <section id='portfolio' className={ `${style.portfolio} wrapper` }>
             <div className={ style.container }>
-                <h2 className={ style.title }> Portfolio </h2>
+                <h2 className={ style.title }> Proyectos </h2>
                 <ul className={ style.projectsContainer }>
                     {
                         ListOfProjects.map( (item)  => (

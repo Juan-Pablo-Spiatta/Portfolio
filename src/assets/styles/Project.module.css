@@ -21,6 +21,7 @@
             border-radius: 1rem;
             width: 200px;
             height: 200px;
+            margin-left: 1rem;
             filter: brightness(70%);
         }
         .infoContainer{
@@ -66,6 +67,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            transition: transform .05s ease-in;
             width: 100px;
             height: 100px;
         }
@@ -79,30 +81,32 @@
                 font-size: .8rem;
                 color: var(--color-4);
             }
-        .links:hover .icon{
-            filter: hue-rotate(210deg) contrast(165%) brightness(180%);
-        }
-        .links:hover .subtitle{
-            color: var(--color-5);
-        }
-        .links:hover{
-            transform: scale(1.2);
-        }
-        .links:link{
-            background-color: transparent;
-        }
 
-.card:hover .content{
-    filter: blur(5px);
-}
-.card:hover .contentInfo:active{
-    clip-path: circle(112% at 90% -10%);
-    opacity: 1;
-}
-.card:hover .contentInfo{
+            
+    .card:hover .content{
+        filter: blur(5px);
+    }
+    .card:hover .contentInfo{
     transition:  clip-path .1s linear 0s;
     clip-path: circle(112% at 90% -10%);
     opacity: 1;
+    }
+
+@media (hover: hover){
+    .card:hover .contentInfo:active{
+        clip-path: circle(112% at 90% -10%);
+        opacity: 1;
+    }
+
+    .links:hover .icon{
+        filter: hue-rotate(210deg) contrast(165%) brightness(180%);
+    }
+    .links:hover .subtitle{
+        color: var(--color-5);
+    }
+    .links:hover{
+        transform: scale(1.2);
+    }
 }
 
 @media screen and (max-width:900px){
@@ -116,3 +120,4 @@
         transform: scale(1);
     }
 }
+

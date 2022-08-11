@@ -9,6 +9,7 @@
   --color-5-transparent: #9fc57967;
   --color-6: #010102;
   --color-6-transparent: #151615bb;
+  --color-7: #161515;
 
   --primary-font: 'Raleway';
   --secundary-font: 'Roboto Slab', serif;
@@ -18,6 +19,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*::selection{
+  background-color: #9fc579;
 }
 
 /* Scroll */
@@ -77,6 +81,13 @@ p{
 h2{
   font-size: 3rem;
   color: var(--color-5);
+}
+
+/*Para animaciones*/
+.visible{
+  opacity: 1 !important;
+  width: 50px !important;
+  transition: width .5s ease-out, opacity .5s ease-in-out;
 }
 
 @media screen and (max-width: 675px){
