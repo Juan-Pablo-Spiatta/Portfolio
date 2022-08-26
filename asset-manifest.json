@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7662b3eb.css",
-    "main.js": "/portfolio/static/js/main.5723f752.js",
-    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/my-picture.jpg": "/portfolio/static/media/my-picture.dc0724c723f9e5c07a68.jpg",
-    "static/media/weather-app-img-2.png": "/portfolio/static/media/weather-app-img-2.7bb721874cf8594d01bd.png",
-    "static/media/react.svg": "/portfolio/static/media/react.0c879fbe66e5ee25706a50ab7d95782d.svg",
-    "static/media/javascript.svg": "/portfolio/static/media/javascript.3a4e0dac08fbf803150bd5573f11511e.svg",
-    "static/media/github-icon-2.svg": "/portfolio/static/media/github-icon-2.4c8d330c0cfe2f2e54a730d9b741a8c3.svg",
-    "static/media/wsp-icon.svg": "/portfolio/static/media/wsp-icon.29dcdca73e073e748280b811bed3be32.svg",
-    "static/media/git.svg": "/portfolio/static/media/git.c97878442efc76f35d717dcbee88fc57.svg",
-    "index.html": "/portfolio/index.html",
-    "static/media/html.svg": "/portfolio/static/media/html.f07dad7b183ceff0e3309954b16137e4.svg",
-    "static/media/css.svg": "/portfolio/static/media/css.8034ad857284c5e83cf3707548af3253.svg",
-    "static/media/visual-studio.svg": "/portfolio/static/media/visual-studio.f2bc75cc5b89a654db989076bc34752a.svg",
-    "static/media/linkedin-icon-2.svg": "/portfolio/static/media/linkedin-icon-2.03f02f89333eecf7c8920178836b08ed.svg",
-    "static/media/codepen-icon.svg": "/portfolio/static/media/codepen-icon.59df4bd98a83bc250969b47cd8293237.svg",
-    "static/media/link-icon.svg": "/portfolio/static/media/link-icon.7c9ec4421a1e2b88df004448aff2d82d.svg",
-    "static/media/mail-icon.svg": "/portfolio/static/media/mail-icon.ea7797699d5ecfea6d11f4edcc5e80f3.svg",
-    "static/media/folder-icon.svg": "/portfolio/static/media/folder-icon.bada3a9c853d9cead15580e5bec04abd.svg",
-    "main.7662b3eb.css.map": "/portfolio/static/css/main.7662b3eb.css.map",
-    "main.5723f752.js.map": "/portfolio/static/js/main.5723f752.js.map",
-    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/Portfolio/static/css/main.7662b3eb.css",
+    "main.js": "/Portfolio/static/js/main.d35f4255.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/my-picture.jpg": "/Portfolio/static/media/my-picture.dc0724c723f9e5c07a68.jpg",
+    "static/media/weather-app-img-2.png": "/Portfolio/static/media/weather-app-img-2.7bb721874cf8594d01bd.png",
+    "static/media/react.svg": "/Portfolio/static/media/react.0c879fbe66e5ee25706a50ab7d95782d.svg",
+    "static/media/javascript.svg": "/Portfolio/static/media/javascript.3a4e0dac08fbf803150bd5573f11511e.svg",
+    "static/media/github-icon-2.svg": "/Portfolio/static/media/github-icon-2.4c8d330c0cfe2f2e54a730d9b741a8c3.svg",
+    "static/media/wsp-icon.svg": "/Portfolio/static/media/wsp-icon.29dcdca73e073e748280b811bed3be32.svg",
+    "static/media/git.svg": "/Portfolio/static/media/git.c97878442efc76f35d717dcbee88fc57.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/html.svg": "/Portfolio/static/media/html.f07dad7b183ceff0e3309954b16137e4.svg",
+    "static/media/css.svg": "/Portfolio/static/media/css.8034ad857284c5e83cf3707548af3253.svg",
+    "static/media/visual-studio.svg": "/Portfolio/static/media/visual-studio.f2bc75cc5b89a654db989076bc34752a.svg",
+    "static/media/linkedin-icon-2.svg": "/Portfolio/static/media/linkedin-icon-2.03f02f89333eecf7c8920178836b08ed.svg",
+    "static/media/codepen-icon.svg": "/Portfolio/static/media/codepen-icon.59df4bd98a83bc250969b47cd8293237.svg",
+    "static/media/link-icon.svg": "/Portfolio/static/media/link-icon.7c9ec4421a1e2b88df004448aff2d82d.svg",
+    "static/media/mail-icon.svg": "/Portfolio/static/media/mail-icon.ea7797699d5ecfea6d11f4edcc5e80f3.svg",
+    "static/media/folder-icon.svg": "/Portfolio/static/media/folder-icon.bada3a9c853d9cead15580e5bec04abd.svg",
+    "main.7662b3eb.css.map": "/Portfolio/static/css/main.7662b3eb.css.map",
+    "main.d35f4255.js.map": "/Portfolio/static/js/main.d35f4255.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7662b3eb.css",
-    "static/js/main.5723f752.js"
+    "static/js/main.d35f4255.js"
   ]
 }
