@@ -15,6 +15,14 @@ const ListOfProjects = [
         link: 'https://app-clima-jps.netlify.app/',
         repository: 'https://github.com/Juan-Pablo-Spiatta/Pagina-clima'
     },
+    {   
+        id: 2,
+        imgUrl: img,
+        title: 'GoScrum',
+        info: 'Pagina de creacion de tareas, estilo Trello',
+        link: 'https://juan-pablo-spiatta.github.io/GoScrum/',
+        repository: 'https://github.com/Juan-Pablo-Spiatta/GoScrum'
+    },
 ]
 
 
