@@ -12,15 +12,15 @@ const ListOfProjects = [
         id: 1,
         imgUrl: img,
         title: 'El clima ⛅',
-        info: 'Pagina web del clima, en este proyecto trabaje con la API openweathermap para obtener los pronosticos del tiempo. La web funciona por geolocalizacion y de muestra los datos del clima actual de la ciudad en la que te encuentras y el pronostico de la proxima semana. ',
+        info: `Página web del clima. Trabaje con HTML, CSS y JavaScrit, funciona por geolocalización. Hice uso de la API del clima de openweathermap. Dejo links a repositorio y de la web.` ,
         link: 'https://app-clima-jps.netlify.app/',
         repository: 'https://github.com/Juan-Pablo-Spiatta/Pagina-clima'
     },
     {   
         id: 2,
         imgUrl: img2,
-        title: 'GoScrum 🗒',
-        info: 'Pagina de creacion de tareas, estilo Trello. En este proyecto trabaje el Front-end y algo del Back-end. Para el Front tabaje con React.js y varias librerias mas como react-router, formik, yup, axios, skeleton, etc. En el back cree un servidor con Node.js y estoy en camino a crear una base de datos. Si queres ver mas detalles pasate por el repo! 😄',
+        title: 'GoScrum 📝',
+        info: 'Aplicación web de creación y gestión de tareas, no posee base de datos por lo que solo se guardan los cambios en memoria. Trabaje con React.js en el frontend y cree un servidor y una REST-API con Node.js. Dejo links a repositorio y de la web.',
         link: 'https://juan-pablo-spiatta.github.io/GoScrum/',
         repository: 'https://github.com/Juan-Pablo-Spiatta/GoScrum'
     },
