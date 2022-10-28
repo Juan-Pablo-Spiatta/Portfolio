@@ -10,7 +10,9 @@ const Project = ( { imgUrl, title, info, webUrl, repositoryUrl } ) => {
     return (
         <li className={ style.card }>
             <div className={style.content}>
-                <img className={ style.image } src={ imgUrl } alt={ title } />
+                <div className={ style.imgContainer }>
+                    <img className={ style.image } src={ imgUrl } alt={ title } />
+                </div>
                 <div className={ style.infoContainer }>
                     <div className={ style.titleContainer }>
                         <h2 className={ style.title }> { title } </h2>
@@ -20,18 +22,14 @@ const Project = ( { imgUrl, title, info, webUrl, repositoryUrl } ) => {
                 </div>
             </div>
             <div className={ style.contentInfo }>
-                <a className={ style.links } href={ repositoryUrl } rel='noopener' target='_blank' >
+                <a className={ style.links } href={ repositoryUrl } rel='noreferrer' target='_blank' >
                     <img className={ style.icon } src={ gitHubIcon } alt="github-icon" />
                     <h3 className={ style.subtitle }> Repositorio </h3>
                 </a>
-                <a className={ style.links } href={ webUrl } rel='noopener' target='_blank' >
+                <a className={ style.links } href={ webUrl } rel='noreferrer' target='_blank' >
                     <img className={ style.icon } src={ linkIcon } alt="link-icon" />
                     <h3 className={ style.subtitle }> Pagina </h3>
                 </a>
-                {/* <a className={ style.links } href={ webUrl } rel='noopener' target='_blank'>
-                    <img className={ style.icon } src={ infoIcon } alt="info-icon" />
-                    <h3 className={ style.subtitle }> Info </h3>
-                </a> */}
             </div>
         </li>
     );

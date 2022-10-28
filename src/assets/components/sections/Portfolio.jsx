@@ -3,8 +3,8 @@ import style from '../../styles/Portfolio.module.css';
 
 import Project from '../Project.jsx';
 
-import img from '../../img/weather-app-img-2.png';
-import img2 from '../../img/goScrum-app-img-2.png';
+import img from '../../img/weatherApp-img.png';
+import img2 from '../../img/goScrum-img.png';
 
 
 const ListOfProjects = [
