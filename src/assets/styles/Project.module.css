@@ -22,7 +22,7 @@
             height: 150px;
             margin-left: 1.5rem;
             padding: .5rem;
-            box-shadow: inset 0px 0px 15px black;
+            box-shadow: inset 0px 0px 15px #161515;
             border-radius: 1rem;
         }
         .image{
