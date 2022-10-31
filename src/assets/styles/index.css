@@ -90,6 +90,11 @@ h2{
   transition: width .5s ease-out, opacity .5s ease-in-out;
 }
 
+.sendMessageVisible{
+  opacity: 1 !important;
+  transition: opacity .5s ease-in-out;
+}
+
 @media screen and (max-width: 675px){
   h2{
     font-size: 2.4rem;

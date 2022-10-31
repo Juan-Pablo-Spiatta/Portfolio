@@ -1,49 +1,59 @@
+// Libraries
 import React, { useState } from 'react';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+// Helpers
+import formSubmitFetch from '../../helpers/formSubmitFetch'
+// Style
 import style from '../../styles/Contact.module.css';
-
-import formSubmitFetch from '../../helpers/formSubmitFetch';
-import { emailValidation } from '../../helpers/validations';
-
+// Media and icons
 import wspIcon from '../../img/usual-icons/wsp-icon.svg';
 import mailIcon from '../../img/usual-icons/mail-icon.svg';
 
 const Contact = () => {
-    const [form, setForm] = useState({name: "", email: "", affair: "", message: ""});
-    const [errorText, setErrorText] = useState("");
-    const [messageOK, setMessageOK] = useState("");
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState("")
 
-    const handleChange = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        })
+    const initialValues = {
+        name: "",
+        email: "",
+        affair: "",
+        message: ""
     }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(e.target.email.value === ""){
-            setMessageOK("");
-            setErrorText("Ingrese una direccion de correo - campo obligatorio *");
-        }else{
-            if(emailValidation(e.target.email.value)){
-                setErrorText("");
-                
-                setMessageOK("Enviando");
-                if(formSubmitFetch()){
-                    setMessageOK("Ocurrio un error, intentelo nuevamente")
-                }
-                else{
-                    setForm({name: "", email: "", affair: "", message: ""})
-                    setMessageOK("Mensaje enviado!");
-                };
-                
-            }
-            else{
-                setMessageOK("");
-                setErrorText("Ingrese una direccion de correo valida");
-            }
+
+    let validationSchema = yup.object().shape({
+        email: yup.string().email("*Ingresar correo con formato valido").required("*Este campo es obligatorio - Ingresar correo"),
+        name: yup.string().required("*Este campo es obligatorio - Ingresa nombre")
+    })
+
+    const handleFetch = async ( data ) => {
+        let response;
+        formSubmitFetch( data )
+            ? response = true
+            : response = false
+        return response
+    }
+
+    const onSubmit = async () => {
+        setLoading(true)
+        setMessage("")
+        const data = {
+            name: values.name,
+            email: values.email,
+            affair: values.affair,
+            message: values.message
         }
+        let res = handleFetch(data)
+        setTimeout(() => {
+            setLoading(false)
+            res? setMessage("Mensaje enviado!") : setMessage("")
+        }, 1000); 
+        formik.resetForm()
     }
-
+    
+    const formik = useFormik({initialValues, validationSchema, onSubmit})
+    const { handleBlur, handleChange, handleSubmit, values, errors, touched} = formik
+    
     return (
         <section id='contact' className={ `${ style.contact } wrapper` }>
             <div className={ style.container }>
@@ -69,15 +79,16 @@ const Contact = () => {
                     </div>
                     <form className={ style.form } onSubmit={ handleSubmit } autoComplete="off" action='' >
                         <label htmlFor="name">
-                            Nombre
+                            Nombre *
                             <input
                                 spellCheck="false"
                                 type="text" 
                                 id='name' 
                                 name='name' 
-                                value={ form.name } 
+                                value={ values.name } 
                                 onChange={ handleChange }
                             />
+                            { errors.name && touched.name && <span className={ style.emailOK }> { errors.name } </span> }
                         </label>
                         <label htmlFor="email">
                             Correo *
@@ -86,10 +97,13 @@ const Contact = () => {
                                 type="text" 
                                 id='email' 
                                 name='email' 
-                                value={ form.email }
+                                value={ values.email }
                                 onChange={ handleChange }
+                                onBlur={ handleBlur }
                             />
-                            <span className={ style.emailOK }> {errorText} </span>
+
+                            { errors.email && touched.email && <span className={ style.emailOK }>{ errors.email }</span> }
+
                         </label>
                         <label htmlFor="affair">
                             Asunto
@@ -98,7 +112,7 @@ const Contact = () => {
                                 type="text" 
                                 id='affair' 
                                 name='affair' 
-                                value={ form.affair }
+                                value={ values.affair }
                                 onChange={ handleChange }
                             />
                         </label>
@@ -112,19 +126,22 @@ const Contact = () => {
                             cols="30" 
                             rows="10" 
                             maxLength={ 2000 } 
-                            value={ form.message }
+                            value={ values.message }
                             onChange={ handleChange }
                             />
                         </label>
-                        <div className={ style.buttonContainer }>
-                            <button className={ style.submitButton } type="submit">
-                                Enviar
-                            </button>
-                            <div id='loadingContainer' className={ style.loadingContainer }>
-                                <div className={ style.loading }></div>
+                        <div className={ style.submitSection }>
+                            <div className={ style.buttonContainer }>
+                                {
+                                    loading
+                                        ?<div className={ style.loading }></div>
+                                        :<button className={ style.submitButton } type="submit">
+                                            <h4>Enviar</h4>
+                                        </button>
+                                }
                             </div>
                         </div>
-                        <span id='submitOK' className={ style.submitOK }> { messageOK }</span>      
+                        { message? <span className={ style.submitOk }> { message } </span> : <></> }    
                     </form>
                 </div>
             </div>

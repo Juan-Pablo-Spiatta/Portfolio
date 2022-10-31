@@ -1,23 +1,21 @@
-function formSubmitFetch(){
-    let error = false;
-    const $form = document.querySelector("form");
-    const $loadingContainer = document.querySelector("#loadingContainer");
-    $loadingContainer.classList.add("visible")
+
+async function formSubmitFetch( {name, email, affair, message} ){
+    const Form = new FormData()
+    Form.append("Nombre", name)
+    Form.append("Correo", email)
+    Form.append("Asunto", affair)
+    Form.append("Mensaje", message)
+
     fetch("https://formsubmit.co/ajax/spiattajuanpablodesarrollador@gmail.com", {
         method: "POST",
-        body: new FormData($form)
+        body: Form
     })
-    .then(res => res.ok ? res.json() : Promise.reject(res))
+    .then(res => res.ok 
+        ? res.json()
+        : Promise.reject(res))
     .catch(err => {
-        let mensaje = err.statusText || "Ocurrio un error, por favor intentelo nuevamente";
-        alert(`Error: ${err.status}: ${mensaje}`);
-        error = true;
+        alert("Algo salio mal, intentalo nuevamente")
     })
-    .finally(() => setTimeout(() => {
-        $loadingContainer.classList.remove("visible");
-    }, 500));
-
-    return error;
 }
 
 export default formSubmitFetch
